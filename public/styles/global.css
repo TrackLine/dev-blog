@@ -1,0 +1,82 @@
+:root {
+  --bg: #f7f7f7;
+  --fg: #1a1a1a;
+  --muted: #6b6b6b;
+  --link: #cc2a2a;
+  --border: #e5e5e5;
+  --container: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  line-height: 1.6;
+  font-size: 15px;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.site-header, .site-footer {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  justify-content: space-between;
+  border-bottom: 1px dashed var(--border);
+}
+
+.site-footer { border-top: 1px dashed var(--border); border-bottom: none; color: var(--muted); }
+
+.brand { text-decoration: none; color: inherit; display: inline-flex; align-items: center; gap: 10px; }
+.brand-mark { display: inline-grid; place-items: center; width: 28px; height: 28px; border: 1px solid var(--fg); border-radius: 50%; font-weight: 700; }
+.brand-name { font-weight: 700; }
+
+.site-nav a { color: var(--fg); text-decoration: none; }
+.site-nav a:hover { text-decoration: underline; text-decoration-style: dotted; }
+.site-nav .sep { color: var(--muted); margin: 0 8px; }
+
+h1, h2, h3 { margin: 20px 0 12px; line-height: 1.25; }
+h1 { font-size: 24px; }
+h2 { font-size: 18px; }
+
+a { color: var(--link); }
+a:hover { opacity: 0.9; }
+
+.list {
+  display: grid;
+  gap: 8px;
+  margin: 8px 0 24px;
+}
+
+.post-item {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 12px;
+}
+
+.post-item time { color: var(--muted); }
+
+.muted { color: var(--muted); }
+
+.tags { display: inline-flex; gap: 6px; }
+.tag { color: var(--muted); text-decoration: none; }
+.tag:hover { text-decoration: underline; }
+
+.lead { margin-top: 6px; color: var(--muted); }
+
+.hr { border-bottom: 1px dashed var(--border); margin: 24px 0; }
+
+/* Prose */
+.prose p { margin: 12px 0; }
+.prose pre { background: #fff; border: 1px solid var(--border); padding: 12px; overflow: auto; }
+.prose code { background: #fff; border: 1px solid var(--border); padding: 2px 4px; }
+
+

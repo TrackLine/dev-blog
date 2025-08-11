@@ -1,0 +1,45 @@
+---
+const {
+  title = 'shalenkov.dev',
+  description = 'Личный сайт и блог Макса Шаленкова',
+} = Astro.props;
+---
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="stylesheet" href="/styles/global.css" />
+  </head>
+  <body>
+    <header class="site-header container">
+      <a class="brand" href="/">
+        <span class="brand-mark">M</span>
+        <span class="brand-name">shalenkov.dev</span>
+      </a>
+      <nav class="site-nav">
+        <a href="/">Home</a>
+        <span class="sep">|</span>
+        <a href="/posts">All posts</a>
+        <span class="sep">|</span>
+        <a href="/tags">Tags</a>
+        <span class="sep">|</span>
+        <a href="/categories">Category</a>
+        <span class="sep">|</span>
+        <a href="/about">About</a>
+      </nav>
+    </header>
+    <main class="container">
+      <slot />
+    </main>
+    <footer class="site-footer container">
+      <div>Copyright © {new Date().getFullYear()} shalenkov.dev</div>
+    </footer>
+  </body>
+  
+</html>
+
+

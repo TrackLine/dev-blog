@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from 'astro:content';
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => +b.data.date - +a.data.date);
+---
+
+<Base title="Все записи — shalenkov.dev">
+  <h1>Все записи</h1>
+  <div class="list">
+    {posts.map((p) => (
+      <div class="post-item">
+        <time datetime={p.data.date.toISOString()}>{p.data.date.toISOString().slice(0,10)}</time>
+        <a href={`/posts/${p.slug}`}>{p.data.title}</a>
+      </div>
+    ))}
+  </div>
+</Base>
+
+

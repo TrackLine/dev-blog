@@ -1,0 +1,29 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const cats = Array.from(new Set(posts.map((p) => p.data.category).filter(Boolean)));
+  return cats.map((c) => ({ params: { category: c! } }));
+}
+
+const { category } = Astro.params;
+const posts = (await getCollection('blog'))
+  .filter((p) => p.data.category === category)
+  .sort((a, b) => +b.data.date - +a.data.date);
+---
+
+<Base title={`Категория ${category} — shalenkov.dev`}>
+  <h1>Категория: {category}</h1>
+  <div class="list">
+    {posts.map((p) => (
+      <div class="post-item">
+        <time datetime={p.data.date.toISOString()}>{p.data.date.toISOString().slice(0,10)}</time>
+        <a href={`/posts/${p.slug}`}>{p.data.title}</a>
+      </div>
+    ))}
+  </div>
+</Base>
+
+

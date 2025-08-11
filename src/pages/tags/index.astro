@@ -1,0 +1,15 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog');
+const tags = Array.from(new Set(posts.flatMap((p) => p.data.tags)));
+---
+
+<Base title="Теги — shalenkov.dev">
+  <h1>Теги</h1>
+  <ul>
+    {tags.map((t) => <li><a href={`/tags/${t}`}>#{t}</a></li>)}
+  </ul>
+</Base>
+
+

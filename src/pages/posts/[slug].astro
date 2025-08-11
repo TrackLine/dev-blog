@@ -1,0 +1,40 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getEntry, getEntryBySlug } from 'astro:content';
+
+export async function getStaticPaths() {
+  const { getCollection } = await import('astro:content');
+  const posts = await getCollection('blog');
+  return posts.map((p) => ({ params: { slug: p.slug } }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntryBySlug('blog', slug!);
+if (!entry) throw new Error('Post not found');
+const { Content, headings } = await entry.render();
+const { title, description, date, tags, category } = entry.data;
+---
+
+<Base title={`${title} — shalenkov.dev`} description={description}>
+  <article class="prose">
+    <h1>{title}</h1>
+    <div class="muted">
+      <time datetime={date.toISOString()}>{date.toISOString().slice(0,10)}</time>
+      {category && (
+        <>
+          {' • '}<a class="tag" href={`/categories/${category}`}>{category}</a>
+        </>
+      )}
+      {tags.length > 0 && (
+        <>
+          {' • '}<span class="tags">
+            {tags.map((t) => <a class="tag" href={`/tags/${t}`}>#{t}</a>)}
+          </span>
+        </>
+      )}
+    </div>
+    <Content />
+  </article>
+</Base>
+
+

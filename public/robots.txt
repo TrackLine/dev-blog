@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shalenkov.dev/sitemap-index.xml
+
+

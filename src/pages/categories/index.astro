@@ -1,0 +1,15 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from 'astro:content';
+const posts = await getCollection('blog');
+const cats = Array.from(new Set(posts.map((p) => p.data.category).filter(Boolean)));
+---
+
+<Base title="Категории — shalenkov.dev">
+  <h1>Категории</h1>
+  <ul>
+    {cats.map((c) => <li><a href={`/categories/${c}`}>{c}</a></li>)}
+  </ul>
+</Base>
+
+

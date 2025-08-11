@@ -1,0 +1,29 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  const tags = Array.from(new Set(posts.flatMap((p) => p.data.tags)));
+  return tags.map((t) => ({ params: { tag: t } }));
+}
+
+const { tag } = Astro.params;
+const posts = (await getCollection('blog'))
+  .filter((p) => p.data.tags.includes(tag!))
+  .sort((a, b) => +b.data.date - +a.data.date);
+---
+
+<Base title={`Тег #${tag} — shalenkov.dev`}>
+  <h1>Тег #{tag}</h1>
+  <div class="list">
+    {posts.map((p) => (
+      <div class="post-item">
+        <time datetime={p.data.date.toISOString()}>{p.data.date.toISOString().slice(0,10)}</time>
+        <a href={`/posts/${p.slug}`}>{p.data.title}</a>
+      </div>
+    ))}
+  </div>
+</Base>
+
+

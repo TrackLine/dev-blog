@@ -1,6 +1,6 @@
 ---
 title: shalenkov.dev
-description: Личный сайт и блог Макса Шаленкова
+description: Блог shalenkov.dev
 ---
 
 <div class="prompt"><span class="user">max</span>@<span class="host">shalenkov</span>:~$ echo "hi"</div>

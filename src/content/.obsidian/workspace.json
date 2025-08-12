@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "pages/projects.md",
+                "file": "blog/hello-world.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "projects"
+              "title": "hello-world"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "pages/projects.md",
+                "file": "blog/hello-world.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Обратные ссылки для projects"
+              "title": "Обратные ссылки для hello-world"
             }
           },
           {
@@ -113,12 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "pages/projects.md",
+                "file": "blog/hello-world.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Исходящие ссылки из projects"
+              "title": "Исходящие ссылки из hello-world"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "pages/projects.md",
+                "file": "blog/hello-world.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Структура projects"
+              "title": "Структура hello-world"
             }
           }
         ]
@@ -171,8 +171,10 @@
   },
   "active": "a6dcb58dc4688c44",
   "lastOpenFiles": [
+    "blog/notes-on-setup.md",
+    "blog/hello-world.md",
     "pages/about.md",
-    "pages/projects.md",
-    "pages/home.md"
+    "pages/home.md",
+    "pages/projects.md"
   ]
 }

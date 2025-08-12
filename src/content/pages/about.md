@@ -1,15 +1,17 @@
 ---
 title: About — shalenkov.dev
-description: О сайте и авторе
+description: About shalenkov.dev
 ---
 
-# Привет! Я Макс Шаленков
+# Тут вы можете меня поддержать
 
-IT Support инженер, любитель автоматизации всего, что движется. Работаю в Mirantis, занимаюсь инфраструктурой, пишу на Python, разбираюсь с Kubernetes и Docker.
+И задонатить на вино, сыр и сервера
 
-- Python, Kubernetes, Docker, AWS, Ansible, Grafana, Linux
-- Люблю осмысленные минималистичные интерфейсы
+- [Рф карты](https://pay.cloudtips.ru/p/84b1ef2f) 
+- [Иностранные карты](https://ko-fi.com/trackline/?hidefeed=true&widget=true&embed=true&preview=true)
+- Toncoin - UQClnieBwV2Ov1mBpAGqkX39clWLH1NA7mHjaGs3t0pQujJ_
+- USDT (TRC20) - TSqUn3RWK295FzLNVkqaz6y5oJMPZGbZji
 
-Больше обо мне и проекты смотри на [GitHub](https://github.com/TrackLine).
+
 
  

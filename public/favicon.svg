@@ -1,6 +1,41 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="10" fill="#111"/>
-  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" font-family="monospace" font-size="28" fill="#fff">M</text>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b0f14"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+    <!-- CRT scanlines -->
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="4" height="1" fill="#ffffff" opacity="0.05"/>
+    </pattern>
+    <filter id="soft">
+      <feDropShadow dx="0" dy="0" stdDeviation="0.6" flood-color="#00d0ff" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="12" fill="url(#bg)" stroke="#1f2937"/>
+  <rect width="64" height="64" fill="url(#scan)" rx="12"/>
+  <!-- pixel stars -->
+  <g fill="#8bdcf9" opacity="0.9">
+    <rect x="8" y="14" width="1" height="1"/>
+    <rect x="20" y="8" width="1" height="1"/>
+    <rect x="54" y="18" width="1" height="1"/>
+    <rect x="46" y="10" width="1" height="1"/>
+    <rect x="12" y="44" width="1" height="1"/>
+    <rect x="50" y="46" width="1" height="1"/>
+  </g>
+  <!-- wireframe globe (90s vibe) -->
+  <g stroke="#00e5ff" stroke-width="1.8" fill="none" filter="url(#soft)">
+    <circle cx="32" cy="32" r="22"/>
+    <!-- meridians -->
+    <path d="M32 10 A22 22 0 0 1 32 54"/>
+    <path d="M32 10 A22 22 0 0 0 32 54"/>
+    <path d="M20 12 A22 22 0 0 1 44 52"/>
+    <path d="M44 12 A22 22 0 0 0 20 52"/>
+    <!-- latitudes -->
+    <path d="M10 32 H54"/>
+    <path d="M12 26 A22 22 0 0 0 52 26"/>
+    <path d="M12 38 A22 22 0 0 1 52 38"/>
+  </g>
 </svg>
 
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 128 128">

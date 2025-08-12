@@ -1,0 +1,41 @@
+---
+import Base from "../../../layouts/Base.astro";
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const all = (await getCollection('blog', ({ data }) => !data.draft))
+    .sort((a, b) => +b.data.date - +a.data.date);
+  const pageSize = 10;
+  const totalPages = Math.max(1, Math.ceil(all.length / pageSize));
+  return Array.from({ length: totalPages }, (_, i) => ({ params: { page: String(i + 1) } }));
+}
+
+const pageSize = 10;
+const page = Number(Astro.params.page || '1');
+const all = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => +b.data.date - +a.data.date);
+const totalPages = Math.max(1, Math.ceil(all.length / pageSize));
+const start = (page - 1) * pageSize;
+const posts = all.slice(start, start + pageSize);
+---
+
+<Base title={`Все записи — страница ${page} — shalenkov.dev`}>
+  <h1>Все записи</h1>
+  <div class="list">
+    {posts.map((p) => (
+      <div class="post-item">
+        <time datetime={p.data.date.toISOString()}>{p.data.date.toISOString().slice(0,10)}</time>
+        <a href={`/posts/${p.slug}`}>{p.data.title}</a>
+      </div>
+    ))}
+  </div>
+  <p class="muted">
+    {page > 1 && <a href={page === 2 ? '/posts' : `/posts/page/${page-1}`}>{'← Предыдущая'}</a>}
+    {' '}
+    Страница {page} из {totalPages}
+    {' '}
+    {page < totalPages && <a href={`/posts/page/${page+1}`}>{'Следующая →'}</a>}
+  </p>
+</Base>
+
+

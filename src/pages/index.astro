@@ -1,21 +1,20 @@
 ---
 import Base from "../layouts/Base.astro";
-import { getCollection } from "astro:content";
+import { getCollection, getEntry } from "astro:content";
 
 const posts = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => +b.data.date - +a.data.date)
-  .slice(0, 7);
+  .slice(0, 4);
+const home = await getEntry('pages', 'home');
+const { Content, headings } = await home.render();
+const projects = await getEntry('pages', 'projects');
+const { Content: Projects } = await projects.render();
 ---
 
-<Base title="arty.dev — shalenkov.dev" description="Личный сайт и блог Макса Шаленкова">
-  <p>
-    Артру. Делаю антифрод, веду канал в телеге и управляю своими
-    копеечками на фондовом рынке. На пиво автору!
-  </p>
-  <p>
-    Найди меня в <a href="https://t.me/TrackLine" target="_blank" rel="noopener">Telegram</a>
-    и на <a href="https://github.com/TrackLine" target="_blank" rel="noopener">GitHub</a>.
-  </p>
+<Base title={home.data.title} description={home.data.description}>
+  <article class="prose">
+    <Content />
+  </article>
 
   <div class="hr" />
   <h2>Writings</h2>
@@ -28,11 +27,10 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
     ))}
   </div>
 
+  <div class="hr" />
   <h2>Projects</h2>
-  <ul>
-    <li><a href="https://github.com/TrackLine/tpulse-py" target="_blank" rel="noopener">tpulse-py</a>: обёртка над API Тинькофф Пульс</li>
-    <li><a href="https://github.com/TrackLine/behance-py" target="_blank" rel="noopener">behance-py</a>: библиотека для скачивания картинок с Behance</li>
-    <li><a href="https://github.com/TrackLine/pulse-monitoring" target="_blank" rel="noopener">pulse-monitoring</a>: мониторинг результатов авторов из Тинькофф Пульса</li>
-  </ul>
+  <article class="prose">
+    <Projects />
+  </article>
 
 </Base>

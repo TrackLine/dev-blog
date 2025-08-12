@@ -13,11 +13,11 @@ const {
     <meta name="description" content={description} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="/styles/global.css" />
+    <script src="/theme.js" is:inline></script>
   </head>
   <body>
-    <header class="site-header container">
+    <header class="site-header container terminal">
       <a class="brand" href="/">
-        <span class="brand-mark">M</span>
         <span class="brand-name">shalenkov.dev</span>
       </a>
       <nav class="site-nav">
@@ -27,9 +27,15 @@ const {
         <span class="sep">|</span>
         <a href="/tags">Tags</a>
         <span class="sep">|</span>
-        <a href="/categories">Category</a>
-        <span class="sep">|</span>
         <a href="/about">About</a>
+        <div class="switch" title="Toggle theme">
+          <input id="theme-toggle" type="checkbox" aria-label="Toggle theme" />
+          <label class="slider" for="theme-toggle">
+            <span class="icon sun">☀</span>
+            <span class="icon moon">🌙</span>
+            <span class="knob"></span>
+          </label>
+        </div>
       </nav>
     </header>
     <main class="container">

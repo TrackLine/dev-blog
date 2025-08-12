@@ -2,8 +2,12 @@
 import Base from "../../layouts/Base.astro";
 import { getCollection } from 'astro:content';
 
-const posts = (await getCollection('blog', ({ data }) => !data.draft))
+const all = (await getCollection('blog', ({ data }) => !data.draft))
   .sort((a, b) => +b.data.date - +a.data.date);
+const pageSize = 10;
+const currentPage = 1;
+const totalPages = Math.max(1, Math.ceil(all.length / pageSize));
+const posts = all.slice(0, pageSize);
 ---
 
 <Base title="Все записи — shalenkov.dev">
@@ -16,6 +20,9 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft))
       </div>
     ))}
   </div>
+  {totalPages > 1 && (
+    <p class="muted">Страница {currentPage} из {totalPages}. <a href="/posts/page/2">Следующая →</a></p>
+  )}
 </Base>
 
 

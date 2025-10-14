@@ -2,6 +2,6 @@
 title: Projects
 ---
 
-**Скоро...**
+[Telegram Shop Bot](https://github.com/TrackLine/telegram-shop-bot)
 
 

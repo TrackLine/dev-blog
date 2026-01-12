@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "6fe52349ab8412bb",
+        "id": "1964e5dadd74f357",
         "type": "tabs",
         "children": [
           {
-            "id": "e88ff5c95308f3bd",
+            "id": "d368c320d4ed984c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "pages/projects.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "projects"
             }
           }
         ]
@@ -166,12 +170,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e88ff5c95308f3bd",
+  "active": "d368c320d4ed984c",
   "lastOpenFiles": [
-    "blog/hello-world.md",
+    "Телеграм Бот.md",
     "pages/projects.md",
-    "pages/about.md",
     "pages/home.md",
+    "pages/about.md",
+    "blog/hello-world.md",
     "().md",
     "blog/notes-on-setup.md"
   ]

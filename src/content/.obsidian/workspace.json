@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "1d404125fb74ed92",
+        "id": "0c112b34e6609c26",
         "type": "tabs",
         "children": [
           {
-            "id": "f724a02d4df3211b",
+            "id": "0490a67c2cb20662",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -170,7 +170,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f724a02d4df3211b",
+  "active": "0490a67c2cb20662",
   "lastOpenFiles": [
     "blog/session-vtower-v3.3.0.md",
     "blog/session-vtower-v3.3.0.md",

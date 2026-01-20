@@ -11,14 +11,10 @@
             "id": "0490a67c2cb20662",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/session-vtower-v3.3.0.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "session-vtower-v3.3.0"
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -170,7 +166,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0490a67c2cb20662",
+  "active": "965e0a3192e6db27",
   "lastOpenFiles": [
     "blog/quick_start_session.md",
     "blog/session-vtower-v3.3.0.md",

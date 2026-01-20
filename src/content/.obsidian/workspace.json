@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/session-vtower-v3.3.0.md",
+                "file": "blog/quick_start_session.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "session-vtower-v3.3.0"
+              "title": "quick_start_session"
             }
           }
         ]
@@ -173,7 +173,7 @@
   "active": "0490a67c2cb20662",
   "lastOpenFiles": [
     "blog/session-vtower-v3.3.0.md",
-    "blog/session-vtower-v3.3.0.md",
+    "blog/quick_start_session.md",
     "blog/hello-world.md",
     "pages/projects.md",
     "Телеграм Бот.md",

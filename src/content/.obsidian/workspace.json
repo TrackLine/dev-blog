@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "blog/hello-world.md",
+                "file": "blog/hello-world 1.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "hello-world"
+              "title": "hello-world 1"
             }
           }
         ]
@@ -173,11 +173,12 @@
   "active": "4e4978c05093d9a8",
   "lastOpenFiles": [
     "blog/session-vtower-v3.3.0.md",
+    "blog/hello-world 1.md",
+    "blog/hello-world.md",
     "pages/projects.md",
     "Телеграм Бот.md",
     "pages/home.md",
     "pages/about.md",
-    "blog/hello-world.md",
     "().md",
     "blog/notes-on-setup.md"
   ]

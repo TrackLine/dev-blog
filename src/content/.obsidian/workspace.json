@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "65b2b22cc6f2fdab",
+        "id": "42f64270f730332b",
         "type": "tabs",
         "children": [
           {
-            "id": "8de75ce4394ff197",
+            "id": "9f3077b073d959c2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "blog/Башня Вампиров (версия 3.3.0).md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Башня Вампиров (версия 3.3.0)"
+              "title": "Новая вкладка"
             }
           }
         ]
@@ -170,7 +166,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8de75ce4394ff197",
+  "active": "9f3077b073d959c2",
   "lastOpenFiles": [
     "blog/Башня Вампиров (версия 3.3.0).md",
     "pages/projects.md",

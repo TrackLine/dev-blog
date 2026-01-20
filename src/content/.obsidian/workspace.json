@@ -11,10 +11,14 @@
             "id": "9f3077b073d959c2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "blog/Башня Вампиров (версия 3.3.0).md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Новая вкладка"
+              "title": "Башня Вампиров (версия 3.3.0)"
             }
           }
         ]
